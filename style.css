@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*  To compile css once: 
+        sass style.scss style.css
+    To continuously compile css: 
+        sass --watch style.scss style.css
+    from this folder's root directory
+*/
+/*  RESET STYLES 
+    Adapted from http://meyerweb.com/eric/tools/css/reset/ 
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  /* added by CG */
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* SITE STYLING */
+/* Variables */
+/* Core elements */
+html * {
+  color: black;
+  font-size: 14px;
+}
+
+#content {
+  height: 100%;
+  transition: all 0.5s linear;
+}
+
+section.h-full {
+  height: 100vh;
+  display: flex;
+}
+
+section.h-auto {
+  height: auto;
+  display: flex;
+}
+
+.container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 85%;
+  padding: 3rem;
+  margin: auto;
+}
+
+.h-auto .container {
+  margin: 5rem auto;
+}
+
+.container-inner-center {
+  padding: 3rem 0;
+}
+
+.container-inner-left {
+  padding: 3rem;
+}
+
+/* Panel backgrounds */
+.bg-white {
+  background-color: white;
+}
+
+.bg-red {
+  background-color: #ce0d0d;
+}
+
+.bg-green {
+  background-color: #0ca90c;
+}
+
+.bg-candy-cane {
+  background-color: #ce0d0d;
+  background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+  background-size: 20px 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: "Alegreya", serif;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+p, li {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Images */
+.image {
+  max-width: 100%;
+  height: auto;
+}
+.image.left {
+  margin-right: auto;
+}
+.image.center {
+  margin: 0 auto;
+}
+.image.right {
+  margin-left: auto;
+}
+
+/* BUTTONS */
+.button, .button-red, .button-green {
+  border: none;
+  color: black;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 3px;
+  font-family: "Open Sans";
+}
+
+.button-green {
+  background-color: #0ca90c;
+}
+.button-green:hover {
+  background-color: #0a910a;
+}
+
+.button-red {
+  background-color: #ce0d0d;
+}
+.button-red:hover {
+  background-color: #b60b0b;
+}
+
+/* POP-UP MODAL */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 25% auto;
+  padding: 1.7rem;
+  border: 1px solid #888;
+  border-radius: 3px;
+  width: 60%;
+}
+.modal-content p, .modal-content li {
+  margin-bottom: 0;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* SPECIFIC PANELS */
+.site-title {
+  font-size: 4rem;
+}
+
+#puns1, #puns2, #puns3, #puns4, #noMorePuns, #gift, #sillyNames, #seriousNames {
+  display: none;
+}
+
+#ans1, #ans2, #ans3, #ans4 {
+  opacity: 0;
+}
+#ans1.red, #ans2.red, #ans3.red, #ans4.red {
+  color: #ce0d0d;
+}
+#ans1.green, #ans2.green, #ans3.green, #ans4.green {
+  color: #0ca90c;
+}
+
+#btnForward1, #btnForward2, #btnForward3, #btnForward4 {
+  display: none;
+}
+
+ul#giftList {
+  padding-bottom: 1rem;
+}
+ul#giftList li::before {
+  content: "🎁 ";
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.domain-grid {
+  margin-top: 4rem;
+  display: flex;
+}
+.domain-grid .col {
+  flex: 1;
+}
+.domain-grid h3 {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Christine's site</title>
+        <meta charset = "UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <nav id="sidebar-nav">
+            <div class="inner">
+                <!-- <p class="heading">Home</p> -->
+                <div class="col">
+                    <p class="heading">Work</p>
+                    <ul>
+                        <li>Content</li>
+                        <li>Data & Research</li>
+                        <li>Frontend Dev</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="heading">About</p>
+                    <p class="heading">CV</p>
+                </div>
+                <!-- Contact info here -->
+                <!-- Link to simple site -->
+            </div>
+        </nav>
+
+        <nav id="sidebar-toc">
+            <div id="toc">
+                <div class="row current" id="toc1">
+                    <p class="num">01</p>
+                    <p class="subtitle">TL;DR</p>
+                </div>
+                
+                <div class="row" id="toc2">
+                    <p class="num">02</p>
+                    <p class="subtitle">My Skills</p>
+                </div>
+
+                <div class="row" id="toc3">
+                    <p class="num">03</p>
+                    <p class="subtitle">Work</p>
+                </div>
+
+                <div class="row" id="toc4">
+                    <p class="num">04</p>
+                    <p class="subtitle">At Now</p>
+                </div>
+            </div>
+        </nav>
+
+        <main id="content">
+            <div id="nav-toggle">
+                <span onclick="openNav()" id="nav-toggle-open">&#9776;</span>
+                <span onclick="closeNav()" id="nav-toggle-close">&#10005;</span>
+            </div>
+            
+            <section class="wave" id="toc1">
+                <div class="text-area">
+                    <div class="container with-wave">
+                        <h1 class="site-title">
+                            Hi! I'm Christine<span class="primary-bright" id="home-dot1">.</span><span class="primary-bright" id="home-dot2">.</span><span class="primary-bright" id="home-dot3">.</span>
+                        </h1>
+                        <h3>My background is in public policy + economic development + math.</h3>
+                        <h3>Now I use words, data, code, and whatever else I need to try to do some good.</h3>
+                        <!-- <img src="./media/circle.svg" class="image left" id="circle-parent" alt="circle"> -->
+                    </div>
+                </div>
+                <div class="wave-area">
+                    <img src="./media/wave.svg">
+                </div>
+            </section>
+            
+
+            <section class="bg-white h-full" id="toc2">
+                <div class="container text-center">
+                    <!-- <img src="./media/circle.svg" class="image right" id="circle-child" alt="circle"> -->
+                    <img src="./media/venn.svg" class="image center" id="venn" alt="venn diagram">
+                    <!-- Note: To change venn center color, see line 86 of svg file (2 locations) -->
+                    <!-- <h3 id="venn-dr">Data & Research</h3>
+                    <h3 id="venn-cnt">Content</h3>
+                    <h3 id="venn-fed">Frontend Dev</h3> -->
+                </div>
+            </section>
+
+            <section class="bg-white h-full" style="position: relative;"> <!-- FIX THIS! -->
+                <!-- <div class="container"> -->
+                    <span id="venn-center"></span>
+                    <span id="venn-center3"></span>
+                    <span id="venn-circle3"></span>
+                <!-- </div> -->
+            </section>
+
+            <section class="bg-white h-full" id="toc3">
+                <div class="container">
+                    <h1>This is an h1</h1>
+                    <h2>This is an h2</h2>
+                    <h3>This is an h3</h3>
+                    <p>
+                        The characteristic theme of the works of Eco is the difference between society and class. Social realism implies that language is used to reinforce the status quo. However, the subject is contextualised into a Lyotardist narrative that includes truth as a reality.
+                    </p>
+
+                    <p>
+                        The characteristic theme of the works of Eco is the difference between
+                        society and class. Social realism implies that language is used to reinforce
+                        the status quo. However, the subject is contextualised into a Lyotardist
+                        narrative that includes truth as a reality.
+                    </p>
+                    <p>
+                        An abundance of narratives concerning social realism exist. But Marx uses
+                        the term ‘Lyotardist narrative’ to denote not theory, as Lyotard would have it,
+                        but subtheory.
+                    </p>
+                    <p>
+                        The primary theme of von Junz’s[1] analysis of social
+                        realism is the role of the writer as artist. In a sense, Bataille uses the term
+                        ‘Sartreist absurdity’ to denote the fatal flaw, and subsequent defining
+                        characteristic, of postcapitalist narrativity.
+                    </p>
+                    <p>    
+                        The premise of social realism states that society has significance, but only
+                        if Foucault’s critique of textual nationalism is invalid; if that is not the
+                        case, consciousness is capable of truth. Thus, the subject is interpolated into
+                        a Lyotardist narrative that includes narrativity as a whole.
+                    </p>
+                </div>
+            </section>
+        </main>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+
+</html>
